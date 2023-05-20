@@ -52,6 +52,11 @@
             // 
             this.priceNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceNumericUpDown.Location = new System.Drawing.Point(256, 67);
+            this.priceNumericUpDown.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
             this.priceNumericUpDown.Name = "priceNumericUpDown";
             this.priceNumericUpDown.Size = new System.Drawing.Size(120, 30);
             this.priceNumericUpDown.TabIndex = 1;
@@ -60,6 +65,11 @@
             // 
             this.quantityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityNumericUpDown.Location = new System.Drawing.Point(382, 67);
+            this.quantityNumericUpDown.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
             this.quantityNumericUpDown.Name = "quantityNumericUpDown";
             this.quantityNumericUpDown.Size = new System.Drawing.Size(120, 30);
             this.quantityNumericUpDown.TabIndex = 2;

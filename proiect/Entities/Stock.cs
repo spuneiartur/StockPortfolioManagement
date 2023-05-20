@@ -18,15 +18,19 @@ namespace proiect.Entities
         public decimal value { get; private set; }   
         
 
-        public Stock(string name, decimal price, decimal quantity)
+        public Stock(int id, string name, decimal price, decimal quantity)
         {
-            noOfStocks++;
-            this.id = noOfStocks;
+            this.id = id;
             this.name = name;
             this.price = price; 
             this.quantity = quantity;   
             this.value = price*quantity;
 
+        }
+
+        public int getId()
+        {
+            return id;
         }
     }
 }

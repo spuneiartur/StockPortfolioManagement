@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,6 +39,11 @@
             this.portolioListView = new System.Windows.Forms.ListView();
             this.addStockBtn = new System.Windows.Forms.Button();
             this.removeStockBtn = new System.Windows.Forms.Button();
+            this.idColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.quantityColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.priceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.valueColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,16 +97,19 @@
             // 
             // portolioListView
             // 
-            listViewGroup3.Header = "ListViewGroup";
-            listViewGroup3.Name = "listViewGroup1";
-            this.portolioListView.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3});
+            this.portolioListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.idColumn,
+            this.nameTitle,
+            this.quantityColumn,
+            this.priceColumn,
+            this.valueColumn});
             this.portolioListView.HideSelection = false;
-            this.portolioListView.Location = new System.Drawing.Point(26, 153);
+            this.portolioListView.Location = new System.Drawing.Point(40, 153);
             this.portolioListView.Name = "portolioListView";
             this.portolioListView.Size = new System.Drawing.Size(726, 227);
             this.portolioListView.TabIndex = 5;
             this.portolioListView.UseCompatibleStateImageBehavior = false;
+            this.portolioListView.View = System.Windows.Forms.View.Details;
             // 
             // addStockBtn
             // 
@@ -122,6 +129,31 @@
             this.removeStockBtn.TabIndex = 7;
             this.removeStockBtn.Text = "Remove";
             this.removeStockBtn.UseVisualStyleBackColor = true;
+            // 
+            // idColumn
+            // 
+            this.idColumn.Text = "ID";
+            this.idColumn.Width = 113;
+            // 
+            // nameTitle
+            // 
+            this.nameTitle.Text = "Stock";
+            this.nameTitle.Width = 240;
+            // 
+            // quantityColumn
+            // 
+            this.quantityColumn.Text = "Quantity";
+            this.quantityColumn.Width = 118;
+            // 
+            // priceColumn
+            // 
+            this.priceColumn.Text = "Price";
+            this.priceColumn.Width = 96;
+            // 
+            // valueColumn
+            // 
+            this.valueColumn.Text = "Value";
+            this.valueColumn.Width = 155;
             // 
             // DashboardForm
             // 
@@ -156,5 +188,10 @@
         private System.Windows.Forms.ListView portolioListView;
         private System.Windows.Forms.Button addStockBtn;
         private System.Windows.Forms.Button removeStockBtn;
+        private System.Windows.Forms.ColumnHeader idColumn;
+        private System.Windows.Forms.ColumnHeader nameTitle;
+        private System.Windows.Forms.ColumnHeader quantityColumn;
+        private System.Windows.Forms.ColumnHeader priceColumn;
+        private System.Windows.Forms.ColumnHeader valueColumn;
     }
 }

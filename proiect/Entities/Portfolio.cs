@@ -9,13 +9,14 @@ namespace proiect.Entities
     public class Portfolio
     {
         readonly int id;
-       
         public int clientId { get; private set; }
         public Portfolio(int id, int clientId)
         {
             this.id = id;
             this.clientId = clientId;
         }
+
+        public int getId() { return id; }   
         
     }
 }
